@@ -1,0 +1,20 @@
+print("Think of a number between 1 and 100")
+
+def guessing():
+    max = 101
+    min = 0
+    for x in range (8):
+        guess = int((max + min)/2)
+        answer = input("Is your number [H]igher, [L]ower or the [S]ame as " + str(guess) + "? ")
+        if answer == "H":
+            min = guess
+        elif answer == "L":
+            max = guess
+        else:
+            if x==0:
+                print("Your number is " + str(guess) + ". It took me 1 guess.")
+            else:
+                print("Your number is " + str(guess) + ". It took me " + str(x+1) + " guesses.")
+            quit()
+
+guessing()
